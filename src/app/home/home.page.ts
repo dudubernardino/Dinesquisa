@@ -7,4 +7,19 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
 
+  input:any = ''; 
+
+  valor:string;
+
+  constructor(){
+    console.log(this.valor);
+  }
+
+  pesquisar() {
+    this.valor = this.input;
+    console.log(this.valor);
+
+    
+  }
+
 }
