@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
-//declare const pesquisar:any;
 declare const pesquisar: any;
+declare const resumir:any;
 
 @Component({
   selector: 'app-home',
@@ -16,17 +16,20 @@ export class HomePage {
   };
 
   input:any = ''; 
-
   valor:string;
+  conteudo;
+  imagens;
+  url;
 
-  constructor(){
-    console.log(this.valor);
-  }
+  constructor(){ }
 
   busca() {
     this.valor = this.input;
-    console.log(this.valor);
-    pesquisar(this.valor);
+    pesquisar(this.valor, this.conteudo, this.url, this.imagens);
   }
+
+  // resumeTexto() {
+  //   resumir(this.url, this.conteudo);
+  // }
 
 }

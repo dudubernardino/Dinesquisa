@@ -29,11 +29,11 @@
 <ion-slides *ngIf="valor != null" pager="true" [options]="slideOpts">
     <ion-slide>
       <ion-card-content>
-          Resumo
+          {{conteudo}}
       </ion-card-content>
     </ion-slide>
-    <ion-slide>
-      <img src="https://scontent.ffor29-1.fna.fbcdn.net/v/t1.0-9/49828813_2160676313989620_8299285728353845248_n.jpg?_nc_cat=102&_nc_ht=scontent.ffor29-1.fna&oh=3afb2c7cb5e72f90bf9fd0874901df03&oe=5D0C6B20">
+    <ion-slide *ngFor = "let fotos of imagens">
+      <img src="fotos">
     </ion-slide>
 </ion-slides>
 <ion-item class="search">
