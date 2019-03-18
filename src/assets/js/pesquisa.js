@@ -207,6 +207,10 @@ function pesquisar(input, conteudo, url, imagens) {
       imagens = JSON.stringify(output.result.images);  
 
       resumir(output.result.url, conteudo);     
+
+      // console.log(conteudo);
+      // console.log(imagens);
+      // console.log(url);
     });
 }
 

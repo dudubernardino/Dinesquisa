@@ -1,14 +1,13 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 declare const pesquisar: any;
-declare const resumir:any;
 
 @Component({
   selector: 'app-home',
   templateUrl: 'home.page.html',
   styleUrls: ['home.page.scss'],
 })
-export class HomePage {
+export class HomePage implements OnInit {
 
   slideOpts = {
     effect: 'flip',
@@ -23,13 +22,14 @@ export class HomePage {
 
   constructor(){ }
 
+  ngOnInit() {}
+
   busca() {
     this.valor = this.input;
     pesquisar(this.valor, this.conteudo, this.url, this.imagens);
+    console.log(this.conteudo);
+    console.log(this.imagens);
+    console.log(this.url);
   }
-
-  // resumeTexto() {
-  //   resumir(this.url, this.conteudo);
-  // }
 
 }
