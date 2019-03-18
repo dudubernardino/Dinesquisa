@@ -12,6 +12,15 @@
 
 @import url('https://fonts.googleapis.com/css?family=Righteous');
 
+p {
+    font-family: 'Righteous', cursive !important;
+}
+
+a {
+    text-decoration:none !important;
+    font-family: 'Righteous', cursive !important;
+    color: #000;
+}
 
 .dinoLogo {
     width: 87% !important;
@@ -21,7 +30,28 @@
     font-family: 'Righteous', cursive !important;
     margin-left: 1.5em !important;
 }
+.title2 {
+    font-family: 'Righteous', cursive !important;
+    margin-top: 1.5em !important;
+}
+
+.socialMedia {
+    font-size: 2em !important;
+    margin-left: 2em !important;
+}
+
+.search {
+    // margin-top: -5em !important;
+}
+.pesquisar {
+    // margin-top: -8em !important;
+}
 
 ion-label {
     font-family: 'Righteous', cursive !important;
+}
+
+ion-slides {
+    width: 100% !important;
+    height: 100% !important;
 }

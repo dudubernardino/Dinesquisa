@@ -7,6 +7,11 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
 
+  slideOpts = {
+    effect: 'flip',
+
+  };
+
   input:any = ''; 
 
   valor:string;
@@ -18,8 +23,6 @@ export class HomePage {
   pesquisar() {
     this.valor = this.input;
     console.log(this.valor);
-
-    
   }
 
 }
