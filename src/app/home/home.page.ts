@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
 
+//declare const pesquisar:any;
+declare const pesquisar: any;
+
 @Component({
   selector: 'app-home',
   templateUrl: 'home.page.html',
@@ -20,9 +23,10 @@ export class HomePage {
     console.log(this.valor);
   }
 
-  pesquisar() {
+  busca() {
     this.valor = this.input;
     console.log(this.valor);
+    pesquisar(this.valor);
   }
 
 }
