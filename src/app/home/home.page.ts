@@ -20,22 +20,23 @@ export class HomePage implements OnInit {
   };
 
   input:any = ''; 
-  valor:string;
+
+  inputLanguage:any = {
+    "articleName": "Michael Jackson",
+    "lang": "pt"
+  };
 
   constructor(){ }
 
   ngOnInit() {
-    // console.log("HOME: " + array);
     valor(teste);
     console.log("HOME: "  + teste);
 
-    pesquisar("Michael Jackson");
-    console.log("HOME: " + arrayJSON);
+    pesquisar(this.inputLanguage);
     
   }
 
   busca() {
-    this.valor = this.input;
   }
 
 }

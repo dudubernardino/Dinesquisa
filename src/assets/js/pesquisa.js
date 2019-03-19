@@ -202,15 +202,11 @@ function pesquisar(input) {
     .algo("web/WikipediaParser/0.1.2?timeout=300") // timeout is optional
     .pipe(input)
     .then(function(output) {
-      url = JSON.stringify(output.result.url);
-      conteudo = resumir(url);
-      imagens = JSON.stringify(output.result.images);  
-
-      arrayJSON = JSON.stringify(output);
-      
-      console.log("ASUAHS: " + arrayJSON);
-    });   
+        arrayJSON = JSON.stringify(output);
+        console.log(arrayJSON);
+    });
 }
+
 
 
 function resumir(url) {
