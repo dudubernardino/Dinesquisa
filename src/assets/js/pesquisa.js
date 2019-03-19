@@ -197,16 +197,13 @@
   //# sourceMappingURL=algorithmia-0.2.0.js.map
 
 var arrayJSON;
-function pesquisar(input) {
-    return Algorithmia.client("simFhhDQMeECjRN/U9nagwtA5hy1")
+async function pesquisar(input) {
+    Algorithmia.client("simFhhDQMeECjRN/U9nagwtA5hy1")
     .algo("web/WikipediaParser/0.1.2?timeout=300") // timeout is optional
     .pipe(input)
     .then(function(output) {
 
-      arrayJSON = output;
-                    
-      var info = JSON.stringify(arrayJSON);
-      return info;
+      return console.log("FODASSE: " + JSON.stringify(output));
     });
 }
 

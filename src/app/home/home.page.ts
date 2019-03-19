@@ -26,6 +26,7 @@ export class HomePage implements OnInit {
     "lang": "pt"
   };
   teste2: any;
+  
 
   constructor(){ }
 
