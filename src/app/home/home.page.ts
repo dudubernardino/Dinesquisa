@@ -25,6 +25,7 @@ export class HomePage implements OnInit {
     "articleName": "Michael Jackson",
     "lang": "pt"
   };
+  teste2: any;
 
   constructor(){ }
 
@@ -32,7 +33,9 @@ export class HomePage implements OnInit {
     valor(teste);
     console.log("HOME: "  + teste);
 
-    pesquisar(this.inputLanguage);
+    this.teste2 = pesquisar(this.inputLanguage);
+    console.log("HOMEFUNCTION: " + pesquisar(this.teste2));
+    console.log("HOMEJSON: " + arrayJSON);
     
   }
 

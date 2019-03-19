@@ -198,12 +198,15 @@
 
 var arrayJSON;
 function pesquisar(input) {
-    Algorithmia.client("simFhhDQMeECjRN/U9nagwtA5hy1")
+    return Algorithmia.client("simFhhDQMeECjRN/U9nagwtA5hy1")
     .algo("web/WikipediaParser/0.1.2?timeout=300") // timeout is optional
     .pipe(input)
     .then(function(output) {
-        arrayJSON = JSON.stringify(output);
-        console.log(arrayJSON);
+
+      arrayJSON = output;
+                    
+      var info = JSON.stringify(arrayJSON);
+      return info;
     });
 }
 
