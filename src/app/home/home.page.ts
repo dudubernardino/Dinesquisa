@@ -1,6 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 
 declare const pesquisar: any;
+declare const resumir:any;
+// declare const setInfo:any;
+declare const teste:any;
+declare const arrayJSON:any;
+declare const valor:any;
 
 @Component({
   selector: 'app-home',
@@ -16,20 +21,21 @@ export class HomePage implements OnInit {
 
   input:any = ''; 
   valor:string;
-  conteudo;
-  imagens;
-  url;
 
   constructor(){ }
 
-  ngOnInit() {}
+  ngOnInit() {
+    // console.log("HOME: " + array);
+    valor(teste);
+    console.log("HOME: "  + teste);
+
+    pesquisar("Michael Jackson");
+    console.log("HOME: " + arrayJSON);
+    
+  }
 
   busca() {
     this.valor = this.input;
-    pesquisar(this.valor, this.conteudo, this.url, this.imagens);
-    console.log(this.conteudo);
-    console.log(this.imagens);
-    console.log(this.url);
   }
 
 }

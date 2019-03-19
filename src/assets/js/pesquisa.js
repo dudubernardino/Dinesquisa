@@ -196,30 +196,40 @@
   
   //# sourceMappingURL=algorithmia-0.2.0.js.map
 
-
-function pesquisar(input, conteudo, url, imagens) {
+var arrayJSON;
+function pesquisar(input) {
     Algorithmia.client("simFhhDQMeECjRN/U9nagwtA5hy1")
     .algo("web/WikipediaParser/0.1.2?timeout=300") // timeout is optional
     .pipe(input)
     .then(function(output) {
-      conteudo = JSON.stringify(output.result.content);
       url = JSON.stringify(output.result.url);
+      conteudo = resumir(url);
       imagens = JSON.stringify(output.result.images);  
 
-      resumir(output.result.url, conteudo);     
-
-      // console.log(conteudo);
-      // console.log(imagens);
-      // console.log(url);
-    });
+      arrayJSON = JSON.stringify(output);
+      
+      console.log("ASUAHS: " + arrayJSON);
+    });   
 }
 
-function resumir(url, conteudo) {
+
+function resumir(url) {
   Algorithmia.client("simFhhDQMeECjRN/U9nagwtA5hy1")
   .algo("nlp/SummarizeURL/0.1.4?timeout=300") // timeout is optional
   .pipe(url)
   .then(function(output) {
-    conteudo = JSON.stringify(output.result);
-    // console.log("After: " + conteudo);
+    return JSON.stringify(output.result);
   });
 }
+
+var teste;
+
+function valor(x) {
+  x = 10;
+  teste = x;
+  console.log("PESQUISA: " + teste);
+}
+
+
+
+
