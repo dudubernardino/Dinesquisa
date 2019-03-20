@@ -196,18 +196,28 @@
   
   //# sourceMappingURL=algorithmia-0.2.0.js.map
 
-var arrayJSON;
+
+
+
+//# DINO FUNCTIONS   
+// function pesquisar(input) {
+//     arrayJSON = Promise.resolve(Algorithmia.client("simFhhDQMeECjRN/U9nagwtA5hy1")
+//     .algo("web/WikipediaParser/0.1.2?") // timeout is optional
+//     .pipe(input)
+//     .then(output => {
+//       console.log(JSON.stringify(output))
+//     }));
+// }
+
+
 async function pesquisar(input) {
-    Algorithmia.client("simFhhDQMeECjRN/U9nagwtA5hy1")
-    .algo("web/WikipediaParser/0.1.2?timeout=300") // timeout is optional
-    .pipe(input)
-    .then(function(output) {
+    const algorithmiaAuthenticated = Algorithmia.client("simFhhDQMeECjRN/U9nagwtA5hy1");
+    const wikipediaAlgorithm = algorithmiaAuthenticated.algo("web/WikipediaParser/0.1.2?");
+    const wikipediaResponse = await wikipediaAlgorithm.pipe(input);
+    const conteudo = $(wikipediaResponse).get();
 
-      return console.log("FODASSE: " + JSON.stringify(output));
-    });
+    return conteudo;
 }
-
-
 
 function resumir(url) {
   Algorithmia.client("simFhhDQMeECjRN/U9nagwtA5hy1")
@@ -216,14 +226,6 @@ function resumir(url) {
   .then(function(output) {
     return JSON.stringify(output.result);
   });
-}
-
-var teste;
-
-function valor(x) {
-  x = 10;
-  teste = x;
-  console.log("PESQUISA: " + teste);
 }
 
 
