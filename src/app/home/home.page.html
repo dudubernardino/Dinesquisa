@@ -24,16 +24,16 @@
 </ion-card> -->
 
 <ion-card-header>
-    <ion-card-title class="title2">{{ valor }}</ion-card-title>
+    <ion-card-title class="title2">Titulo</ion-card-title>
   </ion-card-header>
 <ion-slides *ngIf="valor != null" pager="true" [options]="slideOpts">
     <ion-slide>
       <ion-card-content>
-          {{conteudo}}
+          conteudo
       </ion-card-content>
     </ion-slide>
-    <ion-slide *ngFor = "let fotos of imagens">
-      <img src=[fotos]>
+    <ion-slide *ngFor = "let fotos of infos">
+      <img src=[imagens]>
     </ion-slide>
 </ion-slides>
 <ion-item class="search">

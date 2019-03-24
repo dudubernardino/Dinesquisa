@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { resolve } from 'url';
 
 
-declare const pesquisar:any;
+declare const pesquisar: any;
+declare const resumir:any;
 
 @Component({
   selector: 'app-home',
@@ -12,30 +14,32 @@ export class HomePage implements OnInit {
 
   slideOpts = {
     effect: 'flip',
-
   };
 
-  input:any = ''; 
+  input:any = '';
 
   inputLanguage:any = {
     "articleName": "Michael Jackson",
     "lang": "pt"
   };
-  teste2: any;
+
+  infos: any;
   
   constructor(){ }
 
   ngOnInit() {
-    //valor(teste);
-    //console.log("HOME: "  + teste);
 
-    //this.teste2 = pesquisar(this.inputLanguage);
+    async function chamar(input: string) {
+      return await pesquisar(input);
+    } 
     
-    console.log("HOMEFUNCTION: " + pesquisar(this.inputLanguage));
-    
+    this.infos = chamar(this.inputLanguage);
+    console.log(this.infos);
   }
 
-  busca() {
+  busca(input) {
+    
   }
+  
 
 }

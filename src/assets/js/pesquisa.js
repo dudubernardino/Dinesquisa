@@ -200,22 +200,21 @@
 
 
 //# DINO FUNCTIONS   
-// function pesquisar(input) {
-//     arrayJSON = Promise.resolve(Algorithmia.client("simFhhDQMeECjRN/U9nagwtA5hy1")
-//     .algo("web/WikipediaParser/0.1.2?") // timeout is optional
-//     .pipe(input)
-//     .then(output => {
-//       console.log(JSON.stringify(output))
-//     }));
-// }
-
+//  function pesquisar(input) {
+//       Algorithmia.client("simFhhDQMeECjRN/U9nagwtA5hy1")
+//       .algo("web/WikipediaParser/0.1.2?")
+//       .pipe(input)
+//       .then(output => {
+//         console.log(JSON.stringify(output.result));
+//         return JSON.stringify(output.result);
+//       });
+//  }
 
 async function pesquisar(input) {
     const algorithmiaAuthenticated = Algorithmia.client("simFhhDQMeECjRN/U9nagwtA5hy1");
     const wikipediaAlgorithm = algorithmiaAuthenticated.algo("web/WikipediaParser/0.1.2?");
     const wikipediaResponse = await wikipediaAlgorithm.pipe(input);
     const conteudo = $(wikipediaResponse).get();
-
     return conteudo;
 }
 
@@ -224,6 +223,7 @@ function resumir(url) {
   .algo("nlp/SummarizeURL/0.1.4?timeout=300") // timeout is optional
   .pipe(url)
   .then(function(output) {
+    console.log(output.result);
     return JSON.stringify(output.result);
   });
 }
