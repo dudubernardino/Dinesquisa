@@ -24,7 +24,7 @@
 </ion-card> -->
 
 <ion-card-header>
-    <ion-card-title class="title2">Titulo</ion-card-title>
+    <ion-card-title class="title2"></ion-card-title>
   </ion-card-header>
 <ion-slides *ngIf="valor != null" pager="true" [options]="slideOpts">
     <ion-slide>
@@ -36,6 +36,7 @@
       <img src=[imagens]>
     </ion-slide>
 </ion-slides>
+
 <ion-item class="search">
   <ion-label position="floating">ASSUNTO</ion-label>
   <ion-input class="inputInfo" [(ngModel)] = "input"></ion-input>

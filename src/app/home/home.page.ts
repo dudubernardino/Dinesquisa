@@ -33,8 +33,7 @@ export class HomePage implements OnInit {
       return await pesquisar(input);
     } 
     
-    this.infos = chamar(this.inputLanguage);
-    console.log(this.infos);
+    this.infos = chamar(this.inputLanguage).then(result => console.log(result[0].result));
   }
 
   busca(input) {
