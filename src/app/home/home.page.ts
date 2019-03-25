@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { resolve } from 'url';
+import { utils } from 'protractor';
 
 
 declare const pesquisar: any;
@@ -19,12 +19,15 @@ export class HomePage implements OnInit {
   input:any = '';
 
   inputLanguage:any = {
-    "articleName": "Michael Jackson",
+    "articleName": "Lebron James",
     "lang": "pt"
   };
 
   infos: any;
-  
+  url: any;
+  conteudo: any;
+  images: any;
+
   constructor(){ }
 
   ngOnInit() {
@@ -33,11 +36,36 @@ export class HomePage implements OnInit {
       return await pesquisar(input);
     } 
     
-    this.infos = chamar(this.inputLanguage).then(result => console.log(result[0].result));
+    chamar(this.inputLanguage).then(result => this.getValue(result[0].result));
+        
   }
 
   busca(input) {
     
+  }
+
+  getValue(dado) {
+    this.infos = dado; 
+    this.url = this.infos.url;
+    resumir(this.url).then(result => this.getConteudo(result[0].result));
+    this.getImages(this.infos.images);
+    console.log(this.infos);
+    console.log(this.url);
+    console.log(this.images[0]);
+  }
+
+  getUrl(dado) {
+    this.url = dado;
+    console.log(this.url);
+  }
+
+  getConteudo(dado) {
+    this.conteudo = dado;
+    console.log(this.conteudo);
+  }
+
+  getImages(dado) {
+    this.images = dado;
   }
   
 

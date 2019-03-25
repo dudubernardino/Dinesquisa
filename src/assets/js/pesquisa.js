@@ -218,16 +218,23 @@ async function pesquisar(input) {
     return conteudo;
 }
 
-function resumir(url) {
-  Algorithmia.client("simFhhDQMeECjRN/U9nagwtA5hy1")
-  .algo("nlp/SummarizeURL/0.1.4?timeout=300") // timeout is optional
-  .pipe(url)
-  .then(function(output) {
-    console.log(output.result);
-    return JSON.stringify(output.result);
-  });
-}
+// function resumir(url) {
+//   Algorithmia.client("simFhhDQMeECjRN/U9nagwtA5hy1")
+//   .algo("nlp/SummarizeURL/0.1.4?timeout=300") // timeout is optional
+//   .pipe(url)
+//   .then(function(output) {
+//     console.log(output.result);
+//     return JSON.stringify(output.result);
+//   });
+// }
 
+async function resumir(url) {
+  const algorithmiaAuthenticated = Algorithmia.client("simFhhDQMeECjRN/U9nagwtA5hy1");
+  const wikipediaAlgorithm = algorithmiaAuthenticated.algo("nlp/SummarizeURL/0.1.4?timeout=300");
+  const wikipediaResponse = await wikipediaAlgorithm.pipe(url);
+  const conteudo = $(wikipediaResponse).get();
+  return conteudo;
+}
 
 
 

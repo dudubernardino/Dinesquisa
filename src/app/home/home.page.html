@@ -24,16 +24,22 @@
 </ion-card> -->
 
 <ion-card-header>
-    <ion-card-title class="title2"></ion-card-title>
+    <ion-card-title class="title2">{{infos.title}}</ion-card-title>
   </ion-card-header>
-<ion-slides *ngIf="valor != null" pager="true" [options]="slideOpts">
+<ion-slides *ngIf="infos != null" pager="true" [options]="slideOpts">
     <ion-slide>
       <ion-card-content>
-          conteudo
+          {{conteudo}}
       </ion-card-content>
     </ion-slide>
-    <ion-slide *ngFor = "let fotos of infos">
-      <img src=[imagens]>
+    <ion-slide>
+        <img [src]="images[9]">       
+    </ion-slide>
+    <ion-slide>        
+        <img [src]="images[3]">
+    </ion-slide>
+    <ion-slide>
+        <img [src]="images[5]">
     </ion-slide>
 </ion-slides>
 
