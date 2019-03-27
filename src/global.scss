@@ -12,15 +12,23 @@
 
 @import url('https://fonts.googleapis.com/css?family=Righteous');
 
+body {
+    background-image: url("/assets/images/bg.jpg");
+    background-repeat: no-repeat;
+    background-size: 180%;
+    background-position-x: 42%;
+    background-position-y: 60%;
+}
 
 p {
     font-family: 'Righteous', cursive !important;
+    color: #fff;
 }
 
 a {
     text-decoration:none !important;
     font-family: 'Righteous', cursive !important;
-    color: #000;
+    color: #fff;
 }
 
 .dinoLogo {
@@ -30,10 +38,12 @@ a {
 .title {
     font-family: 'Righteous', cursive !important;
     margin-left: 1.5em !important;
+    color: #fff;
 }
 .title2 {
     font-family: 'Righteous', cursive !important;
     margin-top: 1.5em !important;
+    color: #fff;
 }
 
 .socialMedia {
@@ -57,12 +67,29 @@ a {
     font-family: 'Righteous', cursive !important;
 }
 
+.credit {
+    font-size: 1.4em !important;
+    margin-top: -0.1em !important;
+}
+
 ion-row {
     text-align: center !important;
 }
 
 ion-label {
     font-family: 'Righteous', cursive !important;
+    color: #fff;
+    font-size: 2.5em !important;
+}
+
+ion-input {
+    font-family: 'Righteous', cursive !important;
+    color: #fff !important;
+    font-size: 1.5em !important;
+    border-radius: 1em !important;
+    box-shadow: 0px 0px 2em #fff !important;
+    margin-bottom: 0.5em !important;
+    margin-top: 0.5em !important;
 }
 
 ion-slides {
@@ -72,4 +99,11 @@ ion-slides {
 
 ion-card-content {
     text-align: justify !important;
+    color: #fff;
+    height: 110% !important;
+}
+
+ion-card-title {
+    color: #fff;
+    margin-bottom: 0.2em !important;
 }

@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { utils } from 'protractor';
 
 
 declare const pesquisar: any;
@@ -10,6 +9,8 @@ declare const resumir:any;
   templateUrl: 'home.page.html',
   styleUrls: ['home.page.scss'],
 })
+
+
 export class HomePage implements OnInit {
 
   slideOpts = {
@@ -30,6 +31,7 @@ export class HomePage implements OnInit {
   conteudo: any;
   images: any;
 
+
   constructor(){ }
 
   ngOnInit() {
@@ -38,7 +40,7 @@ export class HomePage implements OnInit {
 
   busca() {
     this.banner = false;
-    
+
     this.inputLanguage.articleName = this.input;
     
     async function chamar(input: string) {
