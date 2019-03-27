@@ -20,6 +20,8 @@ export class HomePage implements OnInit {
   input:any = '';
   title:any;
   banner:boolean = true;
+  inicio:boolean = true;
+  name:string;
 
   inputLanguage:any = {
     "articleName": '',
