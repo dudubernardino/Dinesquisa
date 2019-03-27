@@ -1,27 +1,37 @@
 <ion-row>
-    <ion-col size="4">
-        <img class="dinoLogo" src="assets/images/logo.png">
-    </ion-col>
-    <ion-col size="8">
-      <div>
-        <h1 class="title">DINESQUISA</h1>
-      </div>
-      <div class="socialMedia">
-        <a href="https://www.linkedin.com/in/eduardo-bernardino-407006170/" target="blank"><ion-icon  name="logo-linkedin"></ion-icon></a>
-        <a href="https://www.instagram.com/dudubernardino/" target="blank"><ion-icon name="logo-instagram"></ion-icon></a>
-        <a href="https://github.com/dudubernardino" target="blank" ><ion-icon name="logo-github"></ion-icon></a>
-      </div>
-    </ion-col>
-  </ion-row>
-<!-- <ion-card *ngIf="valor != null">
+  <ion-col size="4">
+      <img class="dinoLogo" src="assets/images/logo.png">
+  </ion-col>
+  <ion-col size="8">
+    <div>
+      <h1 class="title">DINESQUISA</h1>
+    </div>
+    <div class="socialMedia">
+      <a href="https://www.linkedin.com/in/eduardo-bernardino-407006170/" target="blank"><ion-icon  name="logo-linkedin"></ion-icon></a>
+      <a href="https://www.instagram.com/dudubernardino/" target="blank"><ion-icon name="logo-instagram"></ion-icon></a>
+      <a href="https://github.com/dudubernardino" target="blank" ><ion-icon name="logo-github"></ion-icon></a>
+    </div>
+  </ion-col>
+</ion-row>
+
+<div class="infos" *ngIf="banner == true">
   <ion-card-header>
-    <ion-card-title>{{ valor }}</ion-card-title>
+    <ion-card-title>
+      Olá, Toaster!
+    </ion-card-title>
+    <img src="/assets/images/banner.png">
   </ion-card-header>
-    <img src="https://scontent.ffor29-1.fna.fbcdn.net/v/t1.0-9/49828813_2160676313989620_8299285728353845248_n.jpg?_nc_cat=102&_nc_ht=scontent.ffor29-1.fna&oh=3afb2c7cb5e72f90bf9fd0874901df03&oe=5D0C6B20">
-  <ion-card-content>
-      Resumo
-  </ion-card-content>
-</ion-card> -->
+  <ion-row>
+      <ion-col size="6">
+        <p>Desenvolvido por: Eduardo Bernardino</p>
+      </ion-col>
+      <ion-col size="6">
+        <a href="https://algorithmia.com/" target="blank"><p>Créditos:<br>Algorithmia</p></a> 
+      </ion-col>
+  </ion-row>
+</div>
+
+
 
 <ion-card-header>
     <ion-card-title class="title2">{{infos?.title}}</ion-card-title>
@@ -44,17 +54,11 @@
 </ion-slides>
 
 <!-- <div *ngIf="infos == null"> -->
+<div class="pesquisa">
   <ion-item class="search">
     <ion-label position="floating">ASSUNTO</ion-label>
     <ion-input class="inputInfo" [(ngModel)] = "input"></ion-input>
   </ion-item>
   <ion-button id="botao" class="pesquisar" (click)="busca()" color="success">PESQUISAR!</ion-button>
+</div>
 
-<!-- <ion-row>
-    <ion-col size="6">
-      <p>Desenvolvido por: Eduardo Bernardino</p>
-    </ion-col>
-    <ion-col size="6">
-      <a href="https://algorithmia.com/" target="blank"><p>Créditos:<br>Algorithmia</p></a> 
-    </ion-col>
-</ion-row> -->

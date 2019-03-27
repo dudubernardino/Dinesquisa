@@ -12,6 +12,7 @@
 
 @import url('https://fonts.googleapis.com/css?family=Righteous');
 
+
 p {
     font-family: 'Righteous', cursive !important;
 }
@@ -44,8 +45,20 @@ a {
 .search {
     // margin-top: -5em !important;
 }
+.pesquisa {
+    text-align: center !important;
+}
 .pesquisar {
-    // margin-top: -8em !important;
+    width: 20em !important;
+}
+
+.infos {
+    margin-bottom: -7em !important;
+    font-family: 'Righteous', cursive !important;
+}
+
+ion-row {
+    text-align: center !important;
 }
 
 ion-label {

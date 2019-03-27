@@ -18,6 +18,7 @@ export class HomePage implements OnInit {
 
   input:any = '';
   title:any;
+  banner:boolean = true;
 
   inputLanguage:any = {
     "articleName": '',
@@ -36,6 +37,8 @@ export class HomePage implements OnInit {
   }
 
   busca() {
+    this.banner = false;
+    
     this.inputLanguage.articleName = this.input;
     
     async function chamar(input: string) {
