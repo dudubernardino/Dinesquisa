@@ -17,9 +17,10 @@ export class HomePage implements OnInit {
   };
 
   input:any = '';
+  title:any;
 
   inputLanguage:any = {
-    "articleName": "Lebron James",
+    "articleName": '',
     "lang": "pt"
   };
 
@@ -31,17 +32,20 @@ export class HomePage implements OnInit {
   constructor(){ }
 
   ngOnInit() {
-
-    async function chamar(input: string) {
-      return await pesquisar(input);
-    } 
-    
-    chamar(this.inputLanguage).then(result => this.getValue(result[0].result));
         
   }
 
-  busca(input) {
+  busca() {
+    this.inputLanguage.articleName = this.input;
     
+    async function chamar(input: string) {
+      return await pesquisar(input);
+    } 
+
+    chamar(this.inputLanguage).then(result => this.getValue(result[0].result));
+    console.log("VAR: " + this.title);   
+    console.log("TITLE: " + JSON.stringify(this.inputLanguage.articleName));
+    console.log("LANG: " + JSON.stringify(this.inputLanguage.lang));
   }
 
   getValue(dado) {
