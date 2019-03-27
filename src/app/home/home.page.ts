@@ -76,6 +76,12 @@ export class HomePage implements OnInit {
   getImages(dado) {
     this.images = dado;
   }
+
+  backHome() {
+    this.banner = true;
+    this.infos = null;
+    this.input = '';
+  }
   
 
 }

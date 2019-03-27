@@ -33,8 +33,9 @@
 
 
 <ion-card-header>
-    <ion-card-title class="title2">{{infos?.title}}</ion-card-title>
-  </ion-card-header>
+    <ion-card-title class="title2">{{infos?.title}}</ion-card-title><ion-button color="success" *ngIf="infos != null" class="voltar"
+    (click)="backHome()">VOLTAR!</ion-button>
+</ion-card-header>
 <ion-slides *ngIf="infos != null" pager="true" [options]="slideOpts">
     <ion-slide>
       <ion-card-content>

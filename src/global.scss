@@ -72,6 +72,12 @@ a {
     margin-top: -0.1em !important;
 }
 
+.voltar {
+    margin-left: 5.5em !important;
+    height: 1.9em !important;
+    width: 46% !important;
+}
+
 ion-row {
     text-align: center !important;
 }
@@ -106,4 +112,9 @@ ion-card-content {
 ion-card-title {
     color: #fff;
     margin-bottom: 0.2em !important;
+    font-size: 2em !important;
+}
+
+ion-button {
+    font-family: 'Righteous', cursive !important;
 }
